@@ -43,7 +43,7 @@ def read_nmea_from_com_port(port, baudrate=4800, timeout=1):
             coordinates = extract_gpgll(nmea_sentence)
             if coordinates:
                 print(f"Latitude: {coordinates[0]}, Longitude: {coordinates[1]}")
-
+            
     except KeyboardInterrupt:
         # Close the serial port when the program is interrupted
         ser.close()
